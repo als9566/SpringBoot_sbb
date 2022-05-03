@@ -129,7 +129,7 @@ class SbbApplicationTests {
 //        assertEquals(2, a.getQuestion().getId());
 //    }
 	
-	// (답변에 연결된 답변 찾기)
+	//test_11 (답변에 연결된 답변 찾기)
 	@Transactional
 	@Test
     void testJpa() {
