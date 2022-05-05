@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr>
+            <th>力格</th>
+            <th>累己老矫</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="question : ${questionList}">
+            <td th:text="${question.subject}"></td>
+            <td th:text="${question.createDate}"></td>
+        </tr>
+    </tbody>
+</table>
