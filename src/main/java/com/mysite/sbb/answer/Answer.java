@@ -12,6 +12,9 @@ import javax.persistence.ManyToOne;
 import com.mysite.sbb.question.Question;
 import com.mysite.sbb.user.SiteUser;
 
+import java.util.Set;
+import javax.persistence.ManyToMany;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,6 +22,7 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Answer {
+	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -35,4 +39,8 @@ public class Answer {
     private SiteUser author;
     
     private LocalDateTime modifyDate;
+    
+    @ManyToMany
+    Set<SiteUser> voter;
+    
 }
